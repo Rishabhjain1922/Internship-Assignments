@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll the Dice Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex align-items-center">
+    <div class="container py-5">
+        <h1 class="text-center mb-5 display-3 fw-bold text-warning">🎲Roll the dice</h1>
+        
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-3 mb-4 mb-md-0">
+                <div class="player-card text-center p-4" id="player1">
+                    <input type="text" class="form-control bg-transparent text-white text-center mb-3 fw-bold border-white" 
+                           id="name1" value="Player 1">
+                    <img src="https://img.freepik.com/premium-vector/vector-gaming-gamer-logo-design-illustration_894423-53.jpg" 
+                         class="player-avatar rounded-circle mb-3">
+                    <div class="mb-2">
+                        <h5 class="text-warning">Saved Score</h5>
+                        <div class="score-display text-success" id="saved1">0</div>
+                    </div>
+                    <div>
+                        <h5 class="text-warning">Current Score</h5>
+                        <div class="score-display text-info" id="current1">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="dice-container mb-4">
+                    <img src="https://cdn-icons-png.flaticon.com/128/10826/10826863.png" 
+                         class="dice-img mb-4" id="diceImage">
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-lg btn-danger btn-custom" id="rollDice">🎲 Roll Dice</button>
+                        <button class="btn btn-lg btn-success btn-custom" id="saveScore">💾 Save Score</button>
+                        <button class="btn btn-lg btn-warning btn-custom" id="resetGame">🔄 Reset Game</button>
+                    </div>
+                </div>
+                <h2 class="text-success fw-bold" id="winner"></h2>
+            </div>
+            <div class="col-md-3 mt-4 mt-md-0">
+                <div class="player-card text-center p-4" id="player2">
+                    <input type="text" class="form-control bg-transparent text-white text-center mb-3 fw-bold border-white" 
+                           id="name2" value="Player 2">
+                    <img src="https://i.pinimg.com/474x/40/4e/ad/404ead7864125b7e66eaa3ed3d3d1a40.jpg" 
+                         class="player-avatar rounded-circle mb-3">
+                    <div class="mb-2">
+                        <h5 class="text-warning">Saved Score</h5>
+                        <div class="score-display text-success" id="saved2">0</div>
+                    </div>
+                    <div>
+                        <h5 class="text-warning">Current Score</h5>
+                        <div class="score-display text-info" id="current2">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
