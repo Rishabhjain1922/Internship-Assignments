@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title -->
+    <title>Quiz Game | Home</title>
+    
+    <!-- Link to Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Body with dark background and light text -->
+<body class="bg-dark text-light">
+    <!-- Main container for the home page -->
+    <div class="container vh-100 d-flex flex-column justify-content-center">
+        <!-- Page heading -->
+        <h1 class="text-center mb-5 display-3 fw-bold">QuizMaster</h1>
+        
+        <!-- Row for the main content -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Glassmorphism card for category and difficulty selection -->
+                <div class="mb-4 glass-card p-4">
+                    <!-- Category input with autocomplete -->
+                    <div class="mb-4 autocomplete-container">
+                        <label class="form-label fw-bold">Category Name</label>
+                        <div class="autocomplete">
+                            <input type="text" class="form-control custom-input" 
+                                   id="catInput" placeholder="Start typing...">
+                            <!-- Container for autocomplete suggestions -->
+                            <div id="catSuggestions" class="autocomplete-items"></div>
+                        </div>
+                        <!-- Error message for invalid category -->
+                        <div id="catError" class="text-danger mt-2 d-none">
+                            Valid categories: General Knowledge, Science: Computers, Sports, History
+                        </div>
+                    </div>
+                    
+                    <!-- Difficulty selection dropdown -->
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">Difficulty</label>
+                        <select class="form-select custom-input" id="diff">
+                            <option>Easy</option>
+                            <option>Medium</option>
+                            <option>Hard</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Start Quiz button -->
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg px-5 start-btn" id="start">Start Quiz</button>
+                    </div>
+                </div>
+                
+                <!-- Best scores display -->
+                <div class="row text-center mt-4">
+                    <!-- Easy best score -->
+                    <div class="col-md-4 mb-3">
+                        <div class="bg-success p-3 rounded-3">
+                            <h5>Easy Best</h5>
+                            <h2 id="easyBest">0</h2>
+                        </div>
+                    </div>
+                    <!-- Medium best score -->
+                    <div class="col-md-4 mb-3">
+                        <div class="bg-warning p-3 rounded-3">
+                            <h5>Medium Best</h5>
+                            <h2 id="mediumBest">0</h2>
+                        </div>
+                    </div>
+                    <!-- Hard best score -->
+                    <div class="col-md-4">
+                        <div class="bg-danger p-3 rounded-3">
+                            <h5>Hard Best</h5>
+                            <h2 id="hardBest">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Link to the JavaScript file for game logic -->
+    <script src="script.js"></script>
+</body>
+</html>

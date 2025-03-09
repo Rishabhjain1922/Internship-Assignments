@@ -1,0 +1,98 @@
+/* Base body styling */
+body {
+    color: white; /* Default text color */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    transition: background 0.5s ease; /* Smooth transition for background color changes */
+}
+
+/* Difficulty-based background colors */
+body.easy { background: #1a472a; } /* Dark green background for Easy difficulty */
+body.medium { background: #7f6a00; } /* Dark yellow/gold background for Medium difficulty */
+body.hard { background: #4a0f0f; } /* Dark red background for Hard difficulty */
+
+/* Glassmorphism effect for cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect for glass-like appearance */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for contrast */
+}
+
+/* Styling for the quiz question card */
+.quiz-card {
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    color: #333; /* Dark text color for readability */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Autocomplete container styling */
+.autocomplete {
+    position: relative; /* Positioning context for child elements */
+}
+
+/* Styling for autocomplete suggestions dropdown */
+.autocomplete-items {
+    position: absolute; /* Position dropdown below input */
+    border: 1px solid #666; /* Border for dropdown */
+    border-top: none; /* Remove top border for seamless appearance */
+    z-index: 99; /* Ensure dropdown appears above other elements */
+    top: 100%; /* Position below input */
+    left: 0;
+    right: 0;
+    background: #000; /* Dark background for dropdown */
+    max-height: 200px; /* Limit dropdown height */
+    overflow-y: auto; /* Enable scrolling for many suggestions */
+}
+
+/* Styling for individual autocomplete items */
+.autocomplete-item {
+    padding: 10px; /* Spacing inside each item */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: white; /* Text color */
+}
+
+/* Hover effect for autocomplete items */
+.autocomplete-item:hover {
+    background-color: #333; /* Darker background on hover */
+}
+
+/* Styling for correct answers */
+.correct-answer {
+    background: #28a745 !important; /* Green background for correct answers */
+    color: white !important; /* White text for contrast */
+}
+
+/* Styling for incorrect answers */
+.wrong-answer {
+    background: #dc3545 !important; /* Red background for incorrect answers */
+    color: white !important; /* White text for contrast */
+}
+
+/* Celebration animation for high scores */
+.celebration {
+    animation: celebrate 1s infinite; /* Continuous celebration animation */
+}
+
+/* Keyframes for celebration animation */
+@keyframes celebrate {
+    0%, 100% { transform: scale(1); } /* Normal size */
+    50% { transform: scale(1.1); } /* Slightly larger size */
+}
+
+/* Loss animation for low scores */
+.loss {
+    animation: loss 0.5s; /* Quick shake animation */
+}
+
+/* Keyframes for loss animation */
+@keyframes loss {
+    0%, 100% { transform: translateX(0); } /* Normal position */
+    25% { transform: translateX(-10px); } /* Shift left */
+    75% { transform: translateX(10px); } /* Shift right */
+}
+
+/* Styling for the progress bar */
+.progress-bar {
+    transition: width 1s linear; /* Smooth width transition for timer animation */
+}
