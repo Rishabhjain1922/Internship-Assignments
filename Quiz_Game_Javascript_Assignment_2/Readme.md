@@ -96,7 +96,7 @@ Choose to play again or return to the main menu.
 Setup Instructions
 Clone the Repository:
 
-git clone https://github.com/Rishabhjain1922/Quiz_Game_Js-2.git
+git clone https://github.com/Rishabhjain1922/Internship-Assignments/tree/another-branch/Quiz_Game_Javascript_Assignment_2
 cd quiz-game
 Open the Project:
 
